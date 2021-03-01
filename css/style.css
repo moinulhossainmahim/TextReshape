@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --light-color: #f4f4f4;
+}
+
+@font-face {
+  font-family: fontLato;
+  src: url(./../assets/fonts/Lato-Regular.ttf);
+}
+
+body {
+  font-family: "fontLato", sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  color: var(--light-color);
+}
