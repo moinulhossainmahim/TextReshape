@@ -1,30 +1,26 @@
 (function() {
 
-    const uppercaseInputText  = document.getElementById('input-text')
-    const uppercaseOutputText = document.getElementById('output-text')
-    const clearButton         = document.getElementById('clear-button')
-    const copyButton          = document.getElementById('copy-button')
+    const input  = document.getElementById('input')
+    const output = document.getElementById('output')
+    const clear  = document.getElementById('clear-btn')
+    const copy   = document.getElementById('copy-btn')
 
-    clearButton.addEventListener('click', clearInput)
-    copyButton.addEventListener('click', copyToClipboard)
-    uppercaseInputText.addEventListener('input', showOutput)
-
-    //Convert Text To Uppercase Function
-    function showOutput(e) {
-        uppercaseOutputText.innerHTML = e.target.value.toUpperCase()
-    }
+    clear.addEventListener('click', clearFunction)
+    copy.addEventListener('click', copyToClipboard)
 
     //Clear Function
-    function clearInput() {
-        uppercaseInputText.value = ''
-        uppercaseOutputText.value = ''
+    function clearFunction() {
+        input.value = ''
+        output.value = ''
     }
 
     //Copy Function 
     function copyToClipboard() {
-        uppercaseOutputText.select()
-        uppercaseOutputText.setSelectionRange(0, 99999)
+        output.select()
+        output.setSelectionRange(0, 99999)
         document.execCommand("copy")
     }
 
 })();
+
+
