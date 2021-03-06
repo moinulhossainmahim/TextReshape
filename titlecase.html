@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>Text Reshaper</title>
+        <title>Text to Title Case</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
@@ -46,68 +46,60 @@
                     </ul>
                 </div>
             </div>
-          </nav>
-          <section class="section-header">
+        </nav>
+        <section class="section-header">
             <div class="container py-4">
-                <h1 class="text-center display-4 my-5">Online Text Edit Tools</h1>
+                <div class="row">
+                    <div class="col-sm-12">
+                         <div class="section-heading">
+                            <h1>Transform text to Title case</h1>
+                            <p>Convert your text to Title case.Just like this:<strong> hey, text converter => Hey, Text Converter</strong></p>
+                            <P>Title case capitalize every word.This case also know as Proper Case. Just paste your text to the tool in the first textarea and convert it immediately!</P>
+                         </div>
+                    </div> 
+                </div>
                 <div class="row row-main">
-                    <div class="col-sm-12 col-md-4 column-1">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-header">
-                                <h5>Case Converters:</h5>
-                            </div>
-                            <div class="list-group list-group-flush">
-                                <a class="list-group-item list-group-item-action list-item" href="uppercase.html">Text to UPPERCASE</a>
-                                <a class="list-group-item list-group-item-action list-item" href="lowercase.html">Text to lowercase</a>
-                                <a class="list-group-item list-group-item-action list-item" href="camelcase.html">Text to camelCase</a>
-                                <a class="list-group-item list-group-item-action list-item" href="kebabcase.html">Text to kebab-case</a>
-                                <a class="list-group-item list-group-item-action list-item" href="snakecase.html">Text to snake-case</a>
-                                <a class="list-group-item list-group-item-action list-item" href="titlecase.html">Text to Title Case</a>
-                                <a class="list-group-item list-group-item-action list-item" href="capitalizetext.html">Capitalize text</a>
-                                <a class="list-group-item list-group-item-action list-item" href="invertcase.html">Invert Text Case</a>
-                            </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="mb-5">
+                            <label for="text" class="form-label">Put your text here</label>
+                            <textarea rows="8" class="form-control mb-4" id="exampleFormControlTextarea1" placeholder="Please, type some text"></textarea>
+                            <button type="button" class="btn btn-secondary">Clear</button>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 column-2">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-header">
-                                <h5>Text Edit Tools:</h5>
-                            </div>
-                            <div class="list-group list-group-flush">
-                                <a class="list-group-item list-group-item-action list-item" href="removespaces.html">Remove Multiple Spaces</a>
-                                <a class="list-group-item list-group-item-action list-item" href="removedigits.html">Remove Digits</a>
-                                <a class="list-group-item list-group-item-action list-item" href="removenumbers.html">Remove All Except Numbers</a>
-                                <a class="list-group-item list-group-item-action list-item" href="slugifytext.html">Slugify Text</a>
-                            </div>
+                     </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="readonly-input">
+                            <label for="text" class="form-label" placeholder="Result will be here">Result</label>
+                            <textarea rows="8" readonly="readonly" placeholder="Result will be here" class="form-control mb-4"></textarea>
+                            <button type="button" class="btn btn-success">Copy your text</button>
                         </div>
-                    </div>    
+                    </div> 
                 </div>
             </div>
-        </section>    
+        </section>
         <footer>
             <div class="container">
                 <div class="row row-main">
                     <div class="col-sm-12 col-md-4 column-3">
-                        <strong>Text Case Tools:</strong>
-                        <ul class="list-items">
-                            <li><a href="uppercase.html" class="list-item-down">Text to UPPERCASE</a></li>
-                            <li><a href="lowercase.html" class="list-item-down">Text to lowercase</a></li>
-                            <li><a href="camelcase.html" class="list-item-down">Text to camelCase</a></li>
-                            <li><a href="kebabcase.html" class="list-item-down">Text to kebab-case</a></li>
-                            <li><a href="snakecase.html" class="list-item-down">Text to snake-case</a></li>
-                            <li><a href="titlecase.html" class="list-item-down">Text to Title Case</a></li>
-                            <li><a href="capitalizetext.html" class="list-item-down">Capitalize text</a></li>
-                            <li><a href="invertcase.html" class="list-item-down">Invert Text Case</a></li>
-                        </ul>
+                      <strong>Text Case Tools:</strong>
+                      <ul class="list-items">
+                          <li><a href="uppercase.html" class="list-item-down">Text to UPPERCASE</a></li>
+                          <li><a href="lowercase.html" class="list-item-down">Text to lowercase</a></li>
+                          <li><a href="camelcase.html" class="list-item-down">Text to camelCase</a></li>
+                          <li><a href="kebabcase.html" class="list-item-down">Text to kebab-case</a></li>
+                          <li><a href="snakecase.html" class="list-item-down">Text to snake-case</a></li>
+                          <li><a href="titlecase.html" class="list-item-down">Text to Title Case</a></li>
+                          <li><a href="capitalizetext.html" class="list-item-down">Capitalize text</a></li>
+                          <li><a href="invertcase.html" class="list-item-down">Invert Text Case</a></li>
+                      </ul>
                     </div>
                     <div class="col-sm-12 col-md-4 column-4">
-                        <strong>Text Edit Tools:</strong>
-                        <ul class="list-items">
-                            <li><a href="removespaces.html" class="list-item-down">Remove Multiple Spaces</a></li>
-                            <li><a href="removedigits.html" class="list-item-down">Remove Digits</a></li>
-                            <li><a href="removenumbers.html" class="list-item-down">Remove All Except Numbers</a></li>
-                            <li><a href="slugifytext.html" class="list-item-down">Slugify Text</a></li>
-                        </ul>
+                      <strong>Text Edit Tools:</strong>
+                      <ul class="list-items">
+                          <li><a href="removespaces.html" class="list-item-down">Remove Multiple Spaces</a></li>
+                          <li><a href="removedigits.html" class="list-item-down">Remove Digits</a></li>
+                          <li><a href="removenumbers.html" class="list-item-down">Remove All Except Numbers</a></li>
+                          <li><a href="slugifytext.html" class="list-item-down">Slugify Text</a></li>
+                      </ul>
                     </div>
                 </div>
             </div>
