@@ -39,7 +39,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item link" href="removespaces.html">Remove Multiple Spaces</a>
                                 <a class="dropdown-item link" href="removedigits.html">Remove Digits</a>
-                                <a class="dropdown-item link" href="removenumbers.html">Remove All Except Numbers</a>
+                                <a class="dropdown-item link" href="removestrings.html">Remove All Except Numbers</a>
                                 <a class="dropdown-item link" href="slugifytext.html">Slugify Text</a>
                             </div>
                         </li>
@@ -50,7 +50,7 @@
         <section class="section-header">
             <div class="container py-4">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 heading-top">
                          <div class="section-heading">
                             <h1>Remove digits from text</h1>
                             <p>Remove all digits [0..9] from your text.Just like this:<strong> Hey, 2 Text 10 Converter => Hey, Text Converter</strong></p>
@@ -59,18 +59,18 @@
                     </div> 
                 </div>
                 <div class="row row-main">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6 column-1">
                         <div class="mb-5">
                             <label for="text" class="form-label">Put your text here</label>
-                            <textarea rows="8" class="form-control mb-4" id="exampleFormControlTextarea1" placeholder="Please, type here"></textarea>
-                            <button type="button" class="btn btn-secondary">Clear</button>
+                            <textarea rows="8" class="form-control mb-4" id="input" placeholder="Please, type here"></textarea>
+                            <button type="button" class="btn btn-secondary" id="copy-btn">Clear</button>
                         </div>
                      </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6 column-2">
                         <div class="readonly-input">
                             <label for="text" class="form-label" placeholder="Result will be here">Result</label>
-                            <textarea rows="8" readonly="readonly" placeholder="Result will be here" class="form-control mb-4"></textarea>
-                            <button type="button" class="btn btn-success">Copy your text</button>
+                            <textarea id="output" rows="8" readonly="readonly" placeholder="Result will be here" class="form-control mb-4"></textarea>
+                            <button type="button" class="btn btn-success" id="clear-btn">Copy your text</button>
                         </div>
                     </div> 
                 </div>
@@ -97,13 +97,20 @@
                       <ul class="list-items">
                           <li><a href="removespaces.html" class="list-item-down">Remove Multiple Spaces</a></li>
                           <li><a href="removedigits.html" class="list-item-down">Remove Digits</a></li>
-                          <li><a href="removenumbers.html" class="list-item-down">Remove All Except Numbers</a></li>
+                          <li><a href="removestrings.html" class="list-item-down">Remove All Except Numbers</a></li>
                           <li><a href="slugifytext.html" class="list-item-down">Slugify Text</a></li>
                       </ul>
                     </div>
                 </div>
             </div>
         </footer>
+        <script>
+            input.addEventListener('input', removeDigits)
+
+            function removeDigits(e) {
+                output.innerHTML = e.target.value.replace(/[0-9]/g, '');
+            }
+        </script>
         <script src="./js/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
