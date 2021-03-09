@@ -138,4 +138,7 @@ li {
   .column-1 {
     margin-bottom: 25px;
   }
+  .card {
+    width: 100% !important;
+  }
 }
