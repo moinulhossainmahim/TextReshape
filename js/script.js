@@ -9,7 +9,7 @@
     copy.addEventListener('click', copyToClipboard)
 
     //Clear Function
-    function clearFunction(e) {
+    function clearFunction() {
         input.value = ''
         output.value = ''
     }
